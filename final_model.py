@@ -7,11 +7,11 @@ from tensorflow.keras.models import load_model # type: ignore
 from collections import deque
 
 # Load models
-model_dynamic = load_model("sign_model_dynamic_mark2.h5")
-le1 = joblib.load("label_encoder_dynamic.pkl")
+model_dynamic = load_model("models/sign_model_dynamic_mark2.h5")
+le1 = joblib.load("models/label_encoder_dynamic.pkl")
 
-model_static = load_model("sign_model_static_mark2.h5")
-le2 = joblib.load("label_encoder.pkl")  # ['A' to 'Z', 'SPACE', 'DEL']
+model_static = load_model("models/sign_model_static_mark2.h5")
+le2 = joblib.load("models/label_encoder.pkl")  # ['A' to 'Z', 'SPACE', 'DEL']
 
 # Setup MediaPipe
 mphands = mp.solutions.hands
